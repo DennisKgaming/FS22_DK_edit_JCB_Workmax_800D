@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motorStart template="UTV_MOTOR_START" file="$data/vehicles/mahindra/retriever/sounds/retriever_start.wav" linkNode="0>"/>
+            <motorStop template="UTV_MOTOR_STOP" file="$data/vehicles/mahindra/retriever/sounds/retriever_stop.wav" linkNode="0>"/>
+
+            <motor template="UTV_MOTOR_IDLE" file="$data/vehicles/mahindra/retriever/sounds/retriever_idle_loop.wav" linkNode="0>"/>
+            <motor template="UTV_MOTOR_OFFLOAD_RUN" file="$data/vehicles/mahindra/retriever/sounds/retriever_run_loop.wav" linkNode="0>"/>
+            <motor template="UTV_MOTOR_ONLOAD_RUN" file="$data/vehicles/mahindra/retriever/sounds/retriever_load_loop.wav" linkNode="0>"/>
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+            <turnLight template="SWITCH_TURNLIGHT_OPENCABIN" />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="ATTACH_01" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+
+    <cylindered>
+        <sounds>
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </cylindered>
+
+    <honk>
+        <sound template="HONK_JD_GATOR" />
+    </honk>
+</sounds>

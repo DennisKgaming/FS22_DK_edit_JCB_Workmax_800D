@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Salt" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.1"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="textures/snowPlovNormal.dds"/>
+    <File fileId="4" filename="textures/snowPlovSpec.dds"/>
+    <File fileId="11" filename="textures/workmaxDecal.dds"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="12" filename="$data/shared/default_normal.dds"/>
+    <File fileId="10" filename="$data/shared/default_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="default_mat" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="5" customShaderVariation="colorMask">
+      <Glossmap fileId="10"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="lambert1" materialId="515" diffuseColor="0.376471 0.0705882 0.0705882 1">
+    </Material>
+    <Material name="lambert1" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="PlowVisual" materialId="6" diffuseColor="1 1 1 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 0"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 0"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="workmaxDecal" materialId="8" alphaBlending="true" customShaderId="5" customShaderVariation="Decal">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="10"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="snowPlow.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="Snow_Plow_component1" dynamic="true" compound="true" collisionMask="2109442" clipDistance="300" nodeId="518" materialIds="515" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="Visual" translation="0 0.549 0" nodeId="30" materialIds="6" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="translation" translation="0 -0.00824362 0.076" nodeId="31" materialIds="6" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="rotationPart" translation="0 -0.182952 0.0312118" nodeId="32" materialIds="6" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="snowPickupNode" translation="0 -0.36 0.40624" nodeId="33"/>
+              <TransformGroup name="effects" translation="0 -0.132 0.455" rotation="0.98753 -0 0" scale="0.65 0.4 0.55" visibility="false" nodeId="34">
+                <Shape shapeId="5" name="mesh" translation="0 -0.119114 -0.419858" rotation="2.45979 -0 0" clipDistance="300" nodeId="35" materialIds="4" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+              <Shape shapeId="6" name="Decal" translation="0 -0.0657989 -1.6718" nodeId="36" materialIds="8" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="null1" translation="-0.188749 0.00190988 0.133971" nodeId="37"/>
+              <TransformGroup name="collisions" translation="0 -0.0657989 -1.6718" nodeId="38">
+                <Shape shapeId="7" name="collisions6" compoundChild="true" collisionMask="8194" density="0.001" nodeId="39" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+                <Shape shapeId="8" name="collisions5" compoundChild="true" collisionMask="8194" density="0.001" nodeId="40" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+                <Shape shapeId="9" name="collisions4" compoundChild="true" collisionMask="8194" density="0.001" nodeId="41" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="10" name="cylinder" translation="-0.275725 -0.181375 -0.018928" rotation="0 25.8774 0" nodeId="42" materialIds="6" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="11" name="cylinderPunch" translation="-0.00340784 -0.000180474 0.126672" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="hosses01Joint2" translation="0.0156963 -0.067376 0.130222" rotation="0 -25.8774 0" visibility="false" nodeId="44"/>
+              <TransformGroup name="hosses02Joint2" translation="0.01731 0.0242895 0.0242028" rotation="0 -25.8774 0" visibility="false" nodeId="45"/>
+            </Shape>
+            <TransformGroup name="hossesGroup" translation="0 -0.248751 -1.64059" nodeId="46">
+              <Shape shapeId="12" name="hosses01" nodeId="47" materialIds="6" castsShadows="true" receiveShadows="true" skinBindNodeIds="48 44">
+                <TransformGroup name="hosses01Joint1" translation="-0.144317 0 1.6127" rotation="0 243.123 0" visibility="false" nodeId="48"/>
+              </Shape>
+              <Shape shapeId="13" name="hosses02" nodeId="49" materialIds="6" castsShadows="true" receiveShadows="true" skinBindNodeIds="50 45">
+                <TransformGroup name="hosses02Joint1" translation="-0.165069 0.0916656 1.61327" rotation="0 194.98 0" visibility="false" nodeId="50"/>
+              </Shape>
+              <Shape shapeId="14" name="hosses03" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true" skinBindNodeIds="52 56">
+                <TransformGroup name="hosses03Joint1" translation="-0.118063 0.0860747 1.62398" rotation="0 -0 78.1067" visibility="false" nodeId="52"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape shapeId="15" name="support" translation="-0.00178249 -0.380631 -0.0287417" nodeId="53" materialIds="6" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="collisions" compoundChild="true" collisionMask="8194" density="0.001" nodeId="54" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+          <Shape shapeId="17" name="added" translation="0.000108853 -0.141112 -0.0570975" nodeId="55" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="hosses03Joint2" translation="0.572127 0 0.0208522" visibility="false" nodeId="56"/>
+          <TransformGroup name="collisions" translation="0 -0.256994 -1.56451" nodeId="57">
+            <Shape shapeId="18" name="collisions01" compoundChild="true" collisionMask="8194" density="0.001" nodeId="58" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="19" name="collisions2" compoundChild="true" collisionMask="8194" density="0.001" nodeId="59" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="Attacher" translation="4.05941e-09 0.378 -0.0621708" rotation="0 -90 0" nodeId="60"/>
+      </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="44">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="45">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="48">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="50">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="52">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="56">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

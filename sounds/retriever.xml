@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineSmall" file="$data/vehicles/landini/seriesREX4/sounds/seriesREX4_loop.gls" />
+            <motor template="indoorCabinRumble" />
+            <gearbox template="transmissionSmall" file="$data/sounds/vehicles/transmission/newHollandTransmission.wav" pitchScale="0.4" volumeScale="0.25" />
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+            <turnLight template="SWITCH_TURNLIGHT_OPENCABIN"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="ATTACH_01" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+
+    <honk>
+        <sound template="HONK_JD_GATOR" />
+    </honk>
+</sounds>

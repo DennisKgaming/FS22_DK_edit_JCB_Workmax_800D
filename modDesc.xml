@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+    <author>WhiteBull Modding</author>
+    <version>1.0.0.0</version>
+	
+	<title>
+        <en>JCB Workmax 800D</en>
+    </title>
+    <description>
+		<en>
+<![CDATA[This is a JCB Workmax 800D all-terrain vehicle which is very useful for your farm. It is ideal for transporting e.g. wood, cereals, manure, etc. and the tension belts can also be used to secure cargo.
+
+Price: 15795 €
+Capacity: 1000l]]>
+		</en>
+		<de>
+<![CDATA[Dies ist ein JCB Workmax 800D Geländewagen welcher sehr nützlich für deine Farm ist. Er eignet sich zum Transport von z.B. Holz, Getreide, Mist usw. und durch die Spanngurte lässt sich auch Ladung befestigen.
+
+Preis: 15795 €
+Kapazität: 1000l]]>
+		</de>
+	</description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true" />
+	
+	<storeItems>
+        <storeItem xmlFilename="workmax.xml"/>
+		<storeItem xmlFilename="snowPlow.xml"/>
+    </storeItems>
+	
+    <multiplayer supported="true" />
+	
+	<l10n>
+		<text name="configuration_01">
+			<en>Design 01</en>
+		</text>
+		<text name="configuration_02">
+			<en>Design 02</en>
+		</text>
+		<text name="configuration_cabin">
+			<en>Cabin</en>
+			<de>Kabine</de>
+		</text>
+		<text name="configuration_cabin_01">
+			<en>Without windows</en>
+			<de>Keine Scheiben</de>
+		</text>
+		<text name="configuration_cabin_02">
+			<en>First Window</en>
+			<de>Frontscheibe</de>
+		</text>
+		<text name="configuration_cabin_03">
+			<en>Closed Cabin</en>
+			<de>Geschlossene Kabine</de>
+		</text>
+	</l10n>
+</modDesc>
